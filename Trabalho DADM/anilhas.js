@@ -24,6 +24,7 @@ function atrib(){
     const luva = document.querySelector('input[name=luva]:checked').value;
     const almofada = document.querySelector('input[name=almofada]:checked').value;
     produtos = [anilha, barra, almofada, presilha, luva]
+    console.log(produtos);
     iter(produtos);
 }
 
@@ -33,4 +34,3 @@ function iter(prod){
     }
 }
 
-document.getElementById('resultado').value = padrao + 
