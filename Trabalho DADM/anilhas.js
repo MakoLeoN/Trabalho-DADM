@@ -1,21 +1,6 @@
 var produtos = [];
+var itens = []
 var padrao = 90;
-
-function limpar(item){
-    var b = document.querySelector(`label[for=${item}]`).textContent;
-    b = b.split(' ');
-    b = b[b.length - 1];
-    b = b.split('(');
-    b = b[b.length - 1];
-    b = b.split('R$');
-    b = b[b.length - 1];
-    b = b.split(',00)');
-    b = b[0]
-    if (item == undefined){
-        item = 0
-    }
-    else item = b
-};
 
 function atrib(){
     const anilha = document.querySelector('input[name=anilha]:checked').value;
@@ -24,13 +9,32 @@ function atrib(){
     const luva = document.querySelector('input[name=luva]:checked').value;
     const almofada = document.querySelector('input[name=almofada]:checked').value;
     produtos = [anilha, barra, almofada, presilha, luva]
-    console.log(produtos);
-    iter(produtos);
+    iter(produtos)
 }
 
 function iter(prod){
     for (var i = 0; i < prod.length; i++) {
-        limpar(prod[i])
+        var item = 0;
+        var label = prod[i]
+        var b = document.querySelector(`label[for=${label}]`).textContent;
+        b = b.split(' ');
+        b = b[b.length - 1];
+        b = b.split('(');
+        b = b[b.length - 1];
+        if (b.includes('R$') == false){
+            item = 0;
+        }
+        else{
+            b = b.split('R$');
+            b = b[b.length - 1];
+            b = b.split(',00)');
+            b = b[0]
+            b = Number(b)
+            item = b
+        }
+        itens.push(item)
     }
+    console.log(itens)
+    
 }
 
