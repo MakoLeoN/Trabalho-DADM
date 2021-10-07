@@ -1,5 +1,6 @@
 var produtos = [];
-var itens = []
+var itens = [];
+var item = 0;
 var padrao = 90;
 
 function atrib(){
@@ -10,7 +11,14 @@ function atrib(){
     const almofada = document.querySelector('input[name=almofada]:checked').value;
     produtos = [anilha, barra, almofada, presilha, luva]
     iter(produtos)
-}
+};
+
+function soma(itens){
+    for(var i = 0; i < itens.length; i++) {
+        soma += itens[i];
+    }
+    document.getElementById('resultado') = `R$ ${padrao + soma}`;
+};
 
 function iter(prod){
     for (var i = 0; i < prod.length; i++) {
@@ -21,20 +29,17 @@ function iter(prod){
         b = b[b.length - 1];
         b = b.split('(');
         b = b[b.length - 1];
-        if (b.includes('R$') == false){
-            item = 0;
-        }
-        else{
+        if (b.includes('R$') == true){
             b = b.split('R$');
             b = b[b.length - 1];
             b = b.split(',00)');
-            b = b[0]
-            b = Number(b)
-            item = b
+            b = b[0];
+            b = Number(b);
+            item = b;
         }
-        itens.push(item)
+        itens.push(item);
     }
-    console.log(itens)
-    
-}
+    console.log(itens);
+    soma(itens);
+};
 
