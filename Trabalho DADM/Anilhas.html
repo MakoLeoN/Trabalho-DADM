@@ -4,129 +4,123 @@
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <title>Venda de Anilhas!</title>
+         <script src='anilhas.js'></script>
      </head>
 
      <body>
-         <h1>Pack de Anilhas</h1>
-         <img src="anilha1.jpg" alt="anilha" width="200px" height="200px">
-            <p>Valor incial de R$90,00. (32KG. 2x Inclusas)</p>
+         <form onsubmit="a()">
+            <h1>Pack de Anilhas</h1>
+            <img src="anilha1.jpg" alt="anilha" width="200px" height="200px">
+                <p>Valor incial de R$90,00. (32KG. 2x Inclusas)</p>
 
-            <div id="anilha">
-            <fieldset>
-                <legend>+ Anilhas</legend>
-
-                <input type="radio" id="0" name="anilha0" value="Zero">
-                <label for="Zero">Nenhuma anilha adicional </label>
-
-                <input type="radio" id="2" name="anilha2" value="Duas">
-                <label for="Duas">2 Anilhas (+R$90,00) </label>
-
-                <input type="radio" id="3" name="anilha3" value="Tres">
-                <label for="Tres">3 Anilhas (+R$135,00)</label>
-
-                <input type="radio" id="4" name="anilha4" value="Quatro">
-                <label for="Quatro">4 Anilhas (+R$180,00)</label>
-
-            </fieldset>
-            </div>
-
-            <br>
-
-            <h2> Partes adicionais</h2>
-
-            <br>
-            <div id="barras">
-            <fieldset>
-                <legend>Barras incluso. (40cm)</legend>
-
-                <img src="barras1.jpg" alt="barras" width="150px" height="150px">
-                
-                <input type="radio" id="0" name="barras0" value="Zero">
-                <label for="Zero">Nenhuma barra inclusa  </label>
-
-                <input type="radio" id="2" name="barras2" value="Duas">
-                <label for="Duas">2 Barras (+R$50,00) </label>
-
-                <input type="radio" id="3" name="barras3" value="Tres">
-                <label for="Tres">3 Barras (+R$100,00)</label>
-
-                <input type="radio" id="4" name="barras4" value="Quatro">
-                <label for="Quatro">4 Barras (+R$150,00)</label>
-
-            </fieldset>    
-            </div>
-            <br>
-
-            <div id="almofadas">
                 <fieldset>
-                    <legend>Almofadas.</legend>
-    
-                    <img src="almofadas.jpeg" alt="presilha" width="150px" height="150px">
-                    
-                    <input type="radio" id="0" name="almofada0" value="Zero">
-                    <label for="Zero">Nenhuma almofada inclusa</label>
+                    <legend>+ Anilhas</legend>
 
-                    <input type="radio" id="2" name="almofada1" value="Duas">
-                    <label for="Duas">1 Par (+R$60,00) </label>
-    
-                    <input type="radio" id="3" name="almofada2" value="Tres">
-                    <label for="Tres">2 Pares (+R$100,00)</label>
-    
-                    <input type="radio" id="4" name="almofada3" value="Quatro">
-                    <label for="Quatro">3 Pares (+R$130,00)</label>
-    
-                </fieldset>    
-                </div>
-                
+                    <input type="radio" name="anilha" value="anilha0">
+                    <label for="anilha0">Nenhuma anilha adicional</label>
+
+                    <input type="radio" name="anilha" value="anilha2">
+                    <label for="anilha2">2 Anilhas (+R$90,00)</label>
+
+                    <input type="radio" name="anilha" value="anilha3">
+                    <label for="anilha3">3 Anilhas (+R$135,00)</label>
+
+                    <input type="radio"  name="anilha" value="anilha4">
+                    <label for="anilha4">4 Anilhas (+R$180,00)</label>
+
+                </fieldset>
+
                 <br>
-                <div id="presilhas">
+
+                <h2> Partes adicionais</h2>
+
+                <br>
+                <fieldset>
+                    <legend>Barras incluso. (40cm)</legend>
+
+                    <img src="barras1.jpg" alt="barras" width="150px" height="150px">
+                    
+                    <input type="radio" name="barras" value="barra0">
+                    <label for="barra0">Nenhuma barra inclusa</label>
+
+                    <input type="radio" name="barras" value="barra2">
+                    <label for="barra2">2 Barras (+R$50,00)</label>
+
+                    <input type="radio" name="barras" value="barra3">
+                    <label for="barra3">3 Barras (+R$100,00)</label>
+
+                    <input type="radio" name="barras" value="barra4">
+                    <label for="barra4">4 Barras (+R$150,00)</label>
+
+                </fieldset>    
+                <br>
+
                     <fieldset>
-                        <legend>Par de presilhas.</legend>
+                        <legend>Almofadas.</legend>
         
-                        <img src="presilhas1.jpeg" alt="presilha" width="150px" height="150px">
+                        <img src="almofadas.jpeg" alt="presilha" width="150px" height="150px">
                         
-                        <input type="radio" id="0" name="presilha0" value="Zero">
-                        <label for="Zero">Nenhuma presilha incluso </label>
-    
-                        <input type="radio" id="2" name="presilha1" value="Duas">
-                        <label for="Duas">1 Par (+R$10,00) </label>
+                        <input type="radio" name="almofada" value="almofada0">
+                        <label for="almofada0">Nenhuma almofada inclusa</label>
+
+                        <input type="radio" name="almofada" value="almofada2">
+                        <label for="almofada2" id="duas">1 Par (+R$60,00)</label>
         
-                        <input type="radio" id="3" name="presilha2" value="Tres">
-                        <label for="Tres">2 Pares (+R$20,00)</label>
+                        <input type="radio" name="almofada" value="almofada3">
+                        <label for="almofada3" id="tres">2 Pares (+R$120,00)</label>
         
-                        <input type="radio" id="4" name="presilha3" value="Quatro">
-                        <label for="Quatro">3 Pares (+R$30,00)</label>
+                        <input type="radio" name="almofada" value="almofada4">
+                        <label for="almofada4" id="quatro">3 Pares (+R$180,00)</label>
         
                     </fieldset>    
-                    </div>
                     
                     <br>
-                    <div id="luvas">
                         <fieldset>
-                            <legend>Luvas.</legend>
+                            <legend>Par de presilhas.</legend>
             
-                            <img src="luvas.jpg" alt="luvas" width="150px" height="150px">
+                            <img src="presilhas1.jpeg" alt="presilha" width="150px" height="150px">
                             
-                            <input type="radio" id="0" name="luva0" value="Zero">
-                            <label for="Zero">Nenhuma presilha incluso </label>
+                            <input type="radio" name="presilha" value="presilha0">
+                            <label for="presilha0">Nenhuma presilha inclusa</label>
         
-                            <input type="radio" id="2" name="luvaa1" value="Duas">
-                            <label for="Duas">1 Par (+R$10,00) </label>
+                            <input type="radio" name="presilha" value="presilha2">
+                            <label for="presilha2">1 Par (+R$10,00)</label>
             
-                            <input type="radio" id="3" name="luva2" value="Tres">
-                            <label for="Tres">2 Pares (+R$20,00)</label>
+                            <input type="radio" name="presilha" value="presilha3">
+                            <label for="presilha3">2 Pares (+R$20,00)</label>
             
-                            <input type="radio" id="4" name="luva3" value="Quatro">
-                            <label for="Quatro">3 Pares (+R$30,00)</label>
+                            <input type="radio" name="presilha" value="presilha4">
+                            <label for="presilha4">3 Pares (+R$30,00)</label>
             
                         </fieldset>    
-                        </div>
                         
                         <br>
+                            <fieldset>
+                                <legend>Luvas.</legend>
+                
+                                <img src="luvas.jpeg" alt="luvas" width="150px" height="150px">
+                                
+                                <input type="radio" name="luva" value="luva0">
+                                <label for="Zero">Nenhuma luva inclusa</label>
+            
+                                <input type="radio" name="luva" value="luva2">
+                                <label for="luva2">1 Par (+R$10,00)</label>
+                
+                                <input type="radio" name="luva" value="luva3">
+                                <label for="luva3" id="tres">2 Pares (+R$20,00)</label>
+                
+                                <input type="radio" name="luva" value="luva4">
+                                <label for="luva4" id="quatro">3 Pares (+R$30,00)</label>
+                
+                            </fieldset>    
+                            
+                            <br>
+                        </form>
 
             <div id="calculo total">
                 <p>
-                    <input type="submit" value="Preço Final">
+                    <input type="submit" onclick="atrib()">
+                    <output id="resultado"></output>
                 </p>
             </div>    
 
